@@ -10,6 +10,8 @@ param environmentName string
 param location string
 @description('Location for OpenAI resources (if empty uses primary location)')
 param aiResourceLocation string
+@description('AI Search index name')
+param searchIndexName string
 @description('Id of the user or app to assign application roles')
 param principalId string = ''
 param resourceGroupName string = ''
@@ -145,3 +147,4 @@ output AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME string = embeddingDeploymentModelN
 output AZURE_AI_SEARCH_NAME string = search.outputs.searchName
 output AZURE_AI_SEARCH_ENDPOINT string = search.outputs.searchEndpoint
 output AZURE_AI_SEARCH_KEY string = search.outputs.searchAdminKey
+output AZURE_AI_SEARCH_INDEX_NAME string = searchIndexName

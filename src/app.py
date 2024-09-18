@@ -142,7 +142,7 @@ else:
 
 @st.cache_resource
 def create_search_index() -> AzureSearch:
-    index_name: str = "sql-server-index"
+    index_name: str = os.getenv("AZURE_AI_SEARCH_INDEX_NAME")
 
     return AzureSearch(
         azure_search_endpoint=os.getenv("AZURE_AI_SEARCH_ENDPOINT"),
