@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Playground:Python:Streamlit",
+        "type": "debugpy",
+        "request": "launch",
+        "module": "streamlit",
+        "args": ["run", "./src/app.py", "--server.port", "8000"],
+        "justMyCode": false
+      }
+    ]
+  }
+  
